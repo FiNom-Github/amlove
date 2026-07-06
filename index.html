@@ -108,12 +108,18 @@
 	<section class="location">
 		<h2 class="section-title">Место проведения</h2>
 		<p class="location-name">Заволжье, Парк-отель "Лента"</p>
+		<!-- Кнопка "Построить маршрут" -->
+		<a href="yandexnavi://build_route_on_map?lat_to=56.511111&lon_to=43.283333" class="route-btn">
+			🚗 Построить маршрут
+		</a>
 		
 		<div class="map-container">
-			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2e1072795f108a5d715aa5ebeb9b820c029903fd83d6b0679806651366447df&amp;source=constructor" 
-					frameborder="0" 
-					allowfullscreen="true" 
-					style="position:relative;"></iframe>
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2e1072795f108a5d715aa5ebeb9b820c029903fd83d6b0679806651366447df&amp;source=constructor"
+					frameborder="0"
+					width="100%"
+					allowfullscreen="true"
+					style="position:relative;">
+			</iframe>
 		</div>
 	</section>
 
@@ -392,7 +398,7 @@
 			<form class="rsvp-form" id="rsvpForm">
 				<!-- Имя -->
 				<div class="form-group">
-					<label for="name">Ваше имя и фамилия(Если вас будет несколько введите все имена и фамилии) <span class="required">*</span></label>
+					<label for="name">Ваше имя и фамилия (Если вас будет несколько введите все имена и фамилии) <span class="required">*</span></label>
 					<input type="text" id="name" name="name" required placeholder="Иванов Иван и Иванова Мария">
 				</div>
 				
