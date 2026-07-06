@@ -624,13 +624,21 @@
     }
 }
         
-		/* Стили для radio и checkbox */
+/* Стили для radio и checkbox */
 		.radio-group,
 		.checkbox-group {
 			display: flex;
 			flex-wrap: wrap;
 			gap: 12px 20px;
 			margin-top: 5px;
+		}
+
+		/* 🔹 Чекбоксы алкоголя — СТРОГО В ОДИН СТОЛБИК */
+		.checkbox-group {
+			flex-direction: column;
+			flex-wrap: nowrap;
+			gap: 10px;
+			max-width: 100%;
 		}
 
 		.radio-label,
@@ -726,9 +734,12 @@
 
 		/* ===== АДАПТИВ ===== */
 		@media (max-width: 480px) {
-    .radio-group,
-    .checkbox-group {
+    .radio-group {
         gap: 8px 14px;
+    }
+
+    .checkbox-group {
+        gap: 8px;
     }
 
     .radio-label,
@@ -747,7 +758,7 @@
         font-size: 12px;
     }
 }
-		
+
 		/* ========== DRESS CODE SECTION ========== */
 		.dress-code {
 			padding: 100px 20px;
