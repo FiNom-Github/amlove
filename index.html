@@ -467,61 +467,8 @@
         <p style="margin-top: 10px; font-size: 1rem; opacity: 0.8;">С любовью ждём встречи с вами!</p>
     </footer>
 
-    <script>
-        // Countdown Timer
-        function updateCountdown() {
-            const weddingDate = new Date('August 29, 2026 00:00:00').getTime();
-            const now = new Date().getTime();
-            const distance = weddingDate - now;
-
-            if (distance > 0) {
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById('days').textContent = String(days).padStart(2, '0');
-                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-            }
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-
-        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-			e.preventDefault();
-			
-			// Проверка обязательных полей
-			const name = document.getElementById('name').value.trim();
-			const attendance = document.querySelector('input[name="attendance"]:checked');
-			
-			if (!name) {
-				alert('Пожалуйста, укажите ваше имя и фамилию.');
-				return;
-			}
-			
-			if (!attendance) {
-				alert('Пожалуйста, выберите, сможете ли вы присутствовать.');
-				return;
-			}
-			
-			// Собираем данные
-			const formData = {
-				name: name,
-				attendance: attendance.value,
-				food: Array.from(document.querySelectorAll('input[name="food"]:checked')).map(el => el.value),
-				drink: Array.from(document.querySelectorAll('input[name="drink"]:checked')).map(el => el.value),
-				allergies: document.getElementById('allergies').value.trim()
-			};
-			
-			console.log('Данные формы:', formData);
-			
-			alert('Спасибо за ваш ответ! Мы получили вашу анкету.');
-			this.reset();
-		});
-    </script>
+    <!-- Подключение скриптов -->
+    <script src="script.js"></script>
 
 </body>
 </html>
