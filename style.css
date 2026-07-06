@@ -674,22 +674,23 @@
 		.checkbox-group {
 			flex-direction: column;
 			flex-wrap: nowrap;
-			gap: 10px;
+			gap: 12px;
 			max-width: 100%;
 		}
-
+		
 		.radio-label,
 		.checkbox-label {
 			display: flex;
 			align-items: center;
-			gap: 10px;
+			gap: 12px;
 			font-size: 1.05rem;
 			color: #4a4a4a;
 			cursor: pointer;
 			font-weight: 400;
 			transition: color 0.2s ease;
 			position: relative;
-			padding: 4px 0;
+			padding: 0;
+			line-height: 1;
 		}
 
 		.radio-label:hover,
@@ -709,13 +710,14 @@
 		/* Кастомный radio */
 		.radio-custom {
 			display: inline-block;
-			width: 20px;
-			height: 20px;
+			width: 22px;
+			height: 22px;
 			border: 2px solid #d4af37;
 			border-radius: 50%;
 			position: relative;
 			flex-shrink: 0;
 			transition: all 0.2s ease;
+			vertical-align: middle;
 		}
 
 		.radio-label input:checked + .radio-custom {
@@ -738,13 +740,14 @@
 		/* Кастомный checkbox */
 		.checkbox-custom {
 			display: inline-block;
-			width: 20px;
-			height: 20px;
+			width: 22px;
+			height: 22px;
 			border: 2px solid #d4af37;
 			border-radius: 4px;
 			position: relative;
 			flex-shrink: 0;
 			transition: all 0.2s ease;
+			vertical-align: middle;
 		}
 
 		.checkbox-label input:checked + .checkbox-custom {
@@ -771,30 +774,30 @@
 
 		/* ===== АДАПТИВ ===== */
 		@media (max-width: 480px) {
-    .radio-group {
-        gap: 8px 14px;
-    }
+			.radio-group {
+				gap: 12px;
+			}
 
-    .checkbox-group {
-        gap: 8px;
-    }
+			.checkbox-group {
+				gap: 10px;
+			}
 
-    .radio-label,
-    .checkbox-label {
-        font-size: 0.95rem;
-        gap: 8px;
-    }
+			.radio-label,
+			.checkbox-label {
+				font-size: 0.95rem;
+				gap: 10px;
+			}
 
-    .radio-custom,
-    .checkbox-custom {
-        width: 18px;
-        height: 18px;
-    }
+			.radio-custom,
+			.checkbox-custom {
+				width: 20px;
+				height: 20px;
+			}
 
-    .checkbox-label input:checked + .checkbox-custom::after {
-        font-size: 12px;
-    }
-}
+			.checkbox-label input:checked + .checkbox-custom::after {
+				font-size: 12px;
+			}
+		}
 
 		/* ========== DRESS CODE SECTION ========== */
 		.dress-code {
