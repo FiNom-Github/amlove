@@ -1,3 +1,6 @@
+// ========== НАСТРОЙКИ ==========
+const SCRIPT_URL = 'https://script.google.com/macros/s/ВАШ_URL_СКРИПТА/exec'; // ← вставьте URL
+
 // ========== COUNTDOWN TIMER ==========
 function updateCountdown() {
     const weddingDate = new Date('August 29, 2026 00:00:00').getTime();
@@ -17,13 +20,122 @@ function updateCountdown() {
     }
 }
 
-// Запускаем таймер
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// ========== FORM SUBMISSION ==========
-document.querySelector('.rsvp-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Спасибо за ваш ответ! Мы получили вашу анкету.');
-    this.reset();
+// ========== ОТПРАВКА ФОРМЫ ==========
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('rsvpForm');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = form.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            // Блокируем кнопку на время отправки
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'ОТПРАВКА...';
+            submitBtn.style.opacity = '0.7';
+            
+            // Собираем данные
+            const name = form.querySelector('#name').value.trim();
+            const attendance = form.querySelector('input[name="attendance"]:checked')?.value || '';
+            
+            // Собираем все выбранные напитки
+            const drinkCheckboxes = form.querySelectorAll('input[name="drink"]:checked');
+            const drinks = Array.from(drinkCheckboxes).map(cb => {
+                // Находим текст рядом с чекбоксом
+                const label = cb.closest('.checkbox-label');
+                return label ? label.textContent.trim() : cb.value;
+            }).join(', ');
+            
+            const allergies = form.querySelector('#allergies')?.value.trim() || '';
+            
+            // Формируем объект для отправки
+            const formData = {
+                name: name,
+                attendance: attendance,
+                drinks: drinks,
+                allergies: allergies
+            };
+            
+            // Отправляем в Google Apps Script
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(() => {
+                // Успешная отправка
+                showSuccessMessage(form, submitBtn, originalText);
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+                showErrorMessage(submitBtn, originalText);
+            });
+        });
+    }
 });
+
+// ========== СООБЩЕНИЕ ОБ УСПЕХЕ ==========
+function showSuccessMessage(form, submitBtn, originalText) {
+    submitBtn.textContent = '✓ ОТПРАВЛЕНО!';
+    submitBtn.style.background = '#4CAF50';
+    submitBtn.style.opacity = '1';
+    
+    // Создаём красивое сообщение
+    const successMsg = document.createElement('div');
+    successMsg.className = 'success-message';
+    successMsg.innerHTML = `
+        <div style="
+            background: #f0f9f0;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            color: #2e7d32;
+            font-size: 1.1rem;
+            animation: fadeIn 0.5s ease;
+        ">
+            💌 Спасибо! Ваш ответ принят.<br>
+            <span style="font-size: 0.95rem; color: #558b2f;">
+                Мы получили вашу анкету и с нетерпением ждём встречи!
+            </span>
+        </div>
+    `;
+    
+    form.appendChild(successMsg);
+    
+    // Очищаем форму через 2 секунды
+    setTimeout(() => {
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        submitBtn.style.background = '#d4af37';
+        
+        // Убираем сообщение через 5 секунд
+        setTimeout(() => {
+            successMsg.style.opacity = '0';
+            setTimeout(() => successMsg.remove(), 500);
+        }, 5000);
+    }, 2000);
+}
+
+// ========== СООБЩЕНИЕ ОБ ОШИБКЕ ==========
+function showErrorMessage(submitBtn, originalText) {
+    submitBtn.disabled = false;
+    submitBtn.textContent = '❌ ОШИБКА. ПОПРОБУЙТЕ СНОВА';
+    submitBtn.style.background = '#e53935';
+    submitBtn.style.opacity = '1';
+    
+    setTimeout(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.style.background = '#d4af37';
+    }, 3000);
+}
