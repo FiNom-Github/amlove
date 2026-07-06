@@ -409,6 +409,53 @@
             color: #8b7355;
         }
 
+		/* ========== MAP CONTAINER ========== */
+		.map-container {
+			max-width: 900px;
+			margin: 40px auto 0;
+			aspect-ratio: 16 / 9;
+			border-radius: 15px;
+			overflow: hidden;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+		}
+
+		.map-container iframe {
+			width: 100%;
+			height: 100%;
+			border: 0;
+			display: block;
+		}
+
+		/* Для старых браузеров, не поддерживающих aspect-ratio */
+		@supports not (aspect-ratio: 16 / 9) {
+			.map-container {
+				position: relative;
+				height: 0;
+				padding-bottom: 56.25%; /* 9/16 = 0.5625 */
+			}
+			
+			.map-container iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.map-container {
+				max-width: 100%;
+				margin: 30px 0 0 0;
+				border-radius: 10px;
+			}
+		}
+
+		@media (max-width: 480px) {
+		    .map-container {
+		        aspect-ratio: 4 / 3; /* На телефонах делаем карту выше */
+		    }
+		}
+
         /* ========== TIMELINE SECTION ========== */
 		.timeline {
 			padding: 100px 20px;
