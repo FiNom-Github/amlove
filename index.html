@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алексей и Мария - Свадебное приглашение</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css"
+</head>
+<body>
+
+    <!-- ========== HERO SECTION ========== -->
+	<section class="hero">
+		<!-- Левая часть: фото с эффектом затухания -->
+		<div class="hero-photo">
+			<img src="images\1_1.jpg" alt="Алексей и Мария">
+			<div class="photo-fade"></div>
+		</div>
+		
+		<!-- Правая часть: текст -->
+		<div class="hero-content">
+			<p class="hero-subtitle">Приглашение на свадьбу</p>
+			
+			<div class="hero-names">
+				<span class="hero-name">Алексей</span>
+				<span class="hero-name-and">и</span>
+				<span class="hero-name">Мария</span>
+			</div>
+			
+			<p class="hero-date">
+				29 Августа 2026
+			</p>
+			<p class="hero-day">Суббота</p>
+		</div>
+	</section>
+
+    <!-- ========== POLAROID SECTION ========== -->
+    <section class="polaroid-section">
+        <div class="heart-decoration heart-1">♡</div>
+        <div class="heart-decoration heart-2">♡</div>
+
+        <div class="polaroid-container">
+            <div class="polaroid">
+                <div class="photo-frame">
+                    <img src="images\a.png" alt="Алексей">
+                </div>
+                <div class="polaroid-name">Алексей</div>
+            </div>
+
+            <div class="plus-sign">+</div>
+
+            <div class="polaroid">
+                <div class="photo-frame">
+                    <img src="images\m.png" alt="Мария">
+                </div>
+                <div class="polaroid-name">Мария</div>
+            </div>
+        </div>
+
+        <div class="couple-initials">
+            А + М = <span class="heart">♡</span>
+        </div>
+
+        <div class="polaroid-text">
+            <p class="polaroid-main-text">Мы выросли, и теперь нам можно!</p>
+        </div>
+    </section>
+
+    <!-- ========== WELCOME SECTION ========== -->
+    <section class="welcome">
+        <div class="welcome-container">
+            <h2 class="welcome-title">Дорогие гости!</h2>
+            
+            <div class="welcome-content">
+                <p>
+                    Мы очень хотим разделить с вами один из самых важных дней в нашей жизни.<br>
+					Будем счастливы видеть вас на нашей свадьбе!
+                </p>
+            </div>
+
+            <!-- COUNTDOWN TIMER -->
+            <div class="countdown-container">
+				<div class="countdown-item">
+					<div class="countdown-number" id="days">00</div>
+					<div class="countdown-label">дней</div>
+				</div>
+				<div class="countdown-divider">:</div>
+				<div class="countdown-item">
+					<div class="countdown-number" id="hours">00</div>
+					<div class="countdown-label">часов</div>
+				</div>
+				<div class="countdown-divider">:</div>
+				<div class="countdown-item">
+					<div class="countdown-number" id="minutes">00</div>
+					<div class="countdown-label">минут</div>
+				</div>
+				<div class="countdown-divider">:</div>
+				<div class="countdown-item">
+					<div class="countdown-number" id="seconds">00</div>
+					<div class="countdown-label">секунд</div>
+				</div>
+			</div>
+			<div class="countdown-text">До нашей свадьбы</div>
+        </div>
+    </section>
+
+    <!-- ========== LOCATION SECTION ========== -->
+    <section class="location">
+        <h2 class="section-title">Место проведения</h2>
+        <p class="location-name">Заволжье, Парк-отель "Лента"</p>
+		<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2e1072795f108a5d715aa5ebeb9b820c029903fd83d6b0679806651366447df&amp;source=constructor" width="506" height="326" frameborder="0"></iframe>
+    </section>
+
+    <!-- ========== TIMELINE SECTION ========== -->
+	<section class="timeline">
+		<h2 class="section-title">Программа дня</h2>
+		
+		<div class="timeline-container">
+			<!-- Item 1: Кольца -->
+			<div class="timeline-row">
+				<div class="timeline-icon">
+					<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="26" cy="32" r="12" stroke="#d4af37" stroke-width="2" fill="none"/>
+						<circle cx="38" cy="32" r="12" stroke="#d4af37" stroke-width="2" fill="none"/>
+					</svg>
+				</div>
+				<div class="timeline-line">
+					<div class="timeline-heart">♥</div>
+				</div>
+				<div class="timeline-content">
+					<div class="timeline-time">11:00</div>
+					<div class="timeline-event">Сбор гостей и выкуп невесты</div>
+					<div class="timeline-location">г. Чебоксары, ул. Гарина-Михайловского, д.78</div>
+				</div>
+			</div>
+
+			<!-- Item 2: Бокалы -->
+			<div class="timeline-row">
+				<div class="timeline-icon">
+					<!-- Два бокала, чокающихся -->
+					<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<!-- Левый бокал (наклон вправо) -->
+						<g transform="rotate(12, 22, -6)">
+							<!-- Чаша бокала -->
+							<path d="M26 12 L26 30 C26 34 28 36 32 36 C36 36 38 34 38 30 L38 12" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+							<!-- Верхний край -->
+							<line x1="24" y1="12" x2="40" y2="12" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+							<!-- Ножка -->
+							<line x1="32" y1="36" x2="32" y2="46" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+							<!-- Основание -->
+							<line x1="26" y1="46" x2="38" y2="46" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+						</g>
+						
+						<!-- Правый бокал (наклон влево) -->
+						<g transform="rotate(-12, 46, -46)">
+							<!-- Чаша бокала -->
+							<path d="M26 12 L26 30 C26 34 28 36 32 36 C36 36 38 34 38 30 L38 12" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+							<!-- Верхний край -->
+							<line x1="24" y1="12" x2="40" y2="12" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+							<!-- Ножка -->
+							<line x1="32" y1="36" x2="32" y2="46" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+							<!-- Основание -->
+							<line x1="26" y1="46" x2="38" y2="46" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+						</g>
+					</svg>
+				</div>
+				<div class="timeline-line">
+					<div class="timeline-heart">♥</div>
+				</div>
+				<div class="timeline-content">
+					<div class="timeline-time">15:30</div>
+					<div class="timeline-event">Фуршет</div>
+					<div class="timeline-location">Парк-отель «Лента»</div>
+				</div>
+			</div>
+
+			<!-- Item 3: Камера -->
+			<div class="timeline-row">
+				<div class="timeline-icon">
+					<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="12" y="22" width="40" height="26" rx="3" stroke="#d4af37" stroke-width="2" fill="none"/>
+						<circle cx="32" cy="35" r="8" stroke="#d4af37" stroke-width="2" fill="none"/>
+						<circle cx="32" cy="35" r="3" fill="#d4af37"/>
+						<path d="M22 22 L24 16 L28 16 L30 22" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<circle cx="44" cy="28" r="2" fill="#d4af37"/>
+					</svg>
+				</div>
+				<div class="timeline-line">
+					<div class="timeline-heart">♥</div>
+				</div>
+				<div class="timeline-content">
+					<div class="timeline-time">16:00</div>
+					<div class="timeline-event">Церемония и фотосессия</div>
+				</div>
+			</div>
+
+			<!-- Item 4: Поднос с крышкой (клош) - широкий -->
+			<div class="timeline-row">
+				<div class="timeline-icon">
+					<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<!-- Широкое основание подноса -->
+						<path d="M6 44 L58 44" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round"/>
+						<!-- Ножка подноса -->
+						<path d="M24 44 L24 48 M40 44 L40 48 M32 44 L32 50" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+						<!-- Широкая крышка (купол) -->
+						<path d="M10 44 C10 26 18 16 32 16 C46 16 54 26 54 44" stroke="#d4af37" stroke-width="2.5" fill="none"/>
+						<!-- Ручка на крышке -->
+						<circle cx="32" cy="12" r="3" fill="#d4af37"/>
+						<path d="M32 15 L32 18" stroke="#d4af37" stroke-width="2"/>
+					</svg>
+				</div>
+				<div class="timeline-line">
+					<div class="timeline-heart">♥</div>
+				</div>
+				<div class="timeline-content">
+					<div class="timeline-time">17:00</div>
+					<div class="timeline-event">Праздничный банкет</div>
+					<div class="timeline-location">Парк-отель «Лента»</div>
+				</div>
+			</div>
+
+			<!-- Item 5: Фейерверк -->
+			<div class="timeline-row">
+				<div class="timeline-icon">
+					<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<circle cx="32" cy="32" r="3" fill="#d4af37"/>
+						<line x1="32" y1="14" x2="32" y2="22" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+						<line x1="32" y1="42" x2="32" y2="50" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+						<line x1="14" y1="32" x2="22" y2="32" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+						<line x1="42" y1="32" x2="50" y2="32" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+						<line x1="19" y1="19" x2="25" y2="25" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+						<line x1="39" y1="39" x2="45" y2="45" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+						<line x1="19" y1="45" x2="25" y2="39" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+						<line x1="39" y1="25" x2="45" y2="19" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+					</svg>
+				</div>
+				<div class="timeline-line">
+					<div class="timeline-heart">♥</div>
+				</div>
+				<div class="timeline-content">
+					<div class="timeline-time">22:00</div>
+					<div class="timeline-event">Завершение вечера</div>
+				</div>
+			</div>
+		</div>
+</section>
+    
+	<!-- ========== DRESS CODE SECTION ========== -->
+	<section class="dress-code">
+		<h2 class="section-title">Дресс-код</h2>
+		<p class="dress-code-subtitle">
+			Мы будем благодарны, если вы поддержите цветовую гамму нашей свадьбы
+		</p>
+		
+		<!-- Основная палитра -->
+		<div class="color-palette">
+			<div class="color-item">
+				<div class="color-circle" style="background: #3B2A22;"></div>
+				<div class="color-name">Тёмно-коричневый</div>
+			</div>
+			<div class="color-item">
+				<div class="color-circle" style="background: #5A3A2E;"></div>
+				<div class="color-name">Коричневый</div>
+			</div>
+			<div class="color-item">
+				<div class="color-circle" style="background: #9B7B64;"></div>
+				<div class="color-name">Тауп</div>
+			</div>
+			<div class="color-item">
+				<div class="color-circle" style="background: #B9A089;"></div>
+				<div class="color-name">Бежевый</div>
+			</div>
+			<div class="color-item">
+				<div class="color-circle" style="background: #F2C9D0;"></div>
+				<div class="color-name">Светло-розовый</div>
+			</div>
+			<div class="color-item">
+				<div class="color-circle" style="background: #F6E6A6;"></div>
+				<div class="color-name">Мягкий жёлтый</div>
+			</div>
+		</div>
+
+		<!-- Мужская палитра -->
+		<div class="men-colors">
+			<p class="men-title">+ для мужчин</p>
+			<div class="color-palette">
+				<div class="color-item">
+					<div class="color-circle" style="background: #000000;"></div>
+					<div class="color-name">Чёрный</div>
+				</div>
+				<div class="color-item">
+					<div class="color-circle" style="background: #ffffff; border: 2px solid #ddd;"></div>
+					<div class="color-name">Белый</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <!-- ========== GIFTS SECTION ========== -->
+    <section class="gifts">
+        <h2 class="section-title">О подарках</h2>
+        <div class="gifts-text">
+            <p>
+                Ваше присутствие в день нашей свадьбы - самый дорогой подарок для нас!
+            </p>
+            <p>
+                Мы с теплом относимся к традиции дарить цветы, но сами их не очень любим, поэтому будем благодарны,
+				если вы не будете их приносить — для нас важнее ваше внимание и тёплые эмоции этого дня.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== RSVP SECTION ========== -->
+	<section class="rsvp">
+		<h2 class="section-title" style="text-align: center; margin-bottom: 50px;">Анкета гостя</h2>
+		
+		<div class="rsvp-container">
+			<!-- Calendar Block -->
+			<div class="calendar-block">
+				<svg class="calendar-rings" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="40" cy="30" r="25" stroke="#d4af37" stroke-width="4" fill="none"/>
+					<circle cx="60" cy="30" r="25" stroke="#d4af37" stroke-width="4" fill="none"/>
+					<path d="M50 5 Q52 8 50 11" stroke="#d4af37" stroke-width="2" fill="none" opacity="0.5"/>
+					<path d="M35 55 Q37 58 35 61" stroke="#d4af37" stroke-width="2" fill="none" opacity="0.5"/>
+					<path d="M65 55 Q67 58 65 61" stroke="#d4af37" stroke-width="2" fill="none" opacity="0.5"/>
+				</svg>
+				
+				<p class="calendar-subtitle">Пожалуйста подтвердите свое присутствие до 01.08.2026</p>
+				
+				<div class="calendar-month">Август</div>
+				
+				<div class="calendar-grid">
+					<div class="calendar-day-header">ПН</div>
+					<div class="calendar-day-header">ВТ</div>
+					<div class="calendar-day-header">СР</div>
+					<div class="calendar-day-header">ЧТ</div>
+					<div class="calendar-day-header">ПТ</div>
+					<div class="calendar-day-header">СБ</div>
+					<div class="calendar-day-header">ВС</div>
+					
+					<div class="calendar-day empty"></div>
+					<div class="calendar-day empty"></div>
+					<div class="calendar-day empty"></div>
+					<div class="calendar-day empty"></div>
+					<div class="calendar-day empty"></div>
+					<div class="calendar-day weekend">1</div>
+					<div class="calendar-day weekend">2</div>
+					
+					<div class="calendar-day">3</div>
+					<div class="calendar-day">4</div>
+					<div class="calendar-day">5</div>
+					<div class="calendar-day">6</div>
+					<div class="calendar-day">7</div>
+					<div class="calendar-day weekend">8</div>
+					<div class="calendar-day weekend">9</div>
+					
+					<div class="calendar-day">10</div>
+					<div class="calendar-day">11</div>
+					<div class="calendar-day">12</div>
+					<div class="calendar-day">13</div>
+					<div class="calendar-day">14</div>
+					<div class="calendar-day weekend">15</div>
+					<div class="calendar-day weekend">16</div>
+					
+					<div class="calendar-day">17</div>
+					<div class="calendar-day">18</div>
+					<div class="calendar-day">19</div>
+					<div class="calendar-day">20</div>
+					<div class="calendar-day">21</div>
+					<div class="calendar-day weekend">22</div>
+					<div class="calendar-day weekend">23</div>
+					
+					<div class="calendar-day">24</div>
+					<div class="calendar-day">25</div>
+					<div class="calendar-day">26</div>
+					<div class="calendar-day">27</div>
+					<div class="calendar-day">28</div>
+					<div class="calendar-day highlighted weekend">29</div>
+					<div class="calendar-day weekend">30</div>
+					
+					<div class="calendar-day">31</div>
+				</div>
+			</div>
+
+			<!-- RSVP Form с чекбоксами -->
+			<form class="rsvp-form" id="rsvpForm">
+				<!-- Имя -->
+				<div class="form-group">
+					<label for="name">Ваше имя и фамилия(Если вас будет несколько введите все имена и фамилии) <span class="required">*</span></label>
+					<input type="text" id="name" name="name" required placeholder="Иванов Иван и Иванова Мария">
+				</div>
+				
+				<!-- Присутствие — переключатели (radio) -->
+				<div class="form-group">
+					<label>Сможете ли вы присутствовать? <span class="required">*</span></label>
+					<div class="radio-group">
+						<label class="radio-label">
+							<input type="radio" name="attendance" value="yes" required>
+							<span class="radio-custom"></span>
+							С удовольствием приду
+						</label>
+						<label class="radio-label">
+							<input type="radio" name="attendance" value="no" required>
+							<span class="radio-custom"></span>
+							К сожалению, не смогу
+						</label>
+					</div>
+				</div>
+							
+				<!-- Алкоголь — чекбоксы (можно выбрать несколько) -->
+				<div class="form-group">
+					<label>Предпочтения по алкогольным напиткам</label>
+					<div class="checkbox-group">
+						<label class="checkbox-label">
+							<input type="checkbox" name="drink" value="wine-white">
+							<span class="checkbox-custom"></span>
+							Белое вино
+						</label>
+						<label class="checkbox-label">
+							<input type="checkbox" name="drink" value="wine-red">
+							<span class="checkbox-custom"></span>
+							Красное вино
+						</label>
+						<label class="checkbox-label">
+							<input type="checkbox" name="drink" value="champagne">
+							<span class="checkbox-custom"></span>
+							Шампанское
+						</label>
+						<label class="checkbox-label">
+							<input type="checkbox" name="drink" value="whiskey">
+							<span class="checkbox-custom"></span>
+							Виски/коньяк
+						</label>
+						<label class="checkbox-label">
+							<input type="checkbox" name="drink" value="vodka">
+							<span class="checkbox-custom"></span>
+							Свадьбогон
+						</label>
+						<label class="checkbox-label">
+							<input type="checkbox" name="drink" value="none">
+							<span class="checkbox-custom"></span>
+							Не буду пить
+						</label>
+					</div>
+				</div>
+								
+				<button type="submit" class="submit-btn">ОТПРАВИТЬ ОТВЕТ</button>
+			</form>
+		</div>
+	</section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <p>Алексей и Мария | 29 августа 2026</p>
+        <p style="margin-top: 10px; font-size: 1rem; opacity: 0.8;">С любовью ждём встречи с вами!</p>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date('August 29, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('days').textContent = String(days).padStart(2, '0');
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+			e.preventDefault();
+			
+			// Проверка обязательных полей
+			const name = document.getElementById('name').value.trim();
+			const attendance = document.querySelector('input[name="attendance"]:checked');
+			
+			if (!name) {
+				alert('Пожалуйста, укажите ваше имя и фамилию.');
+				return;
+			}
+			
+			if (!attendance) {
+				alert('Пожалуйста, выберите, сможете ли вы присутствовать.');
+				return;
+			}
+			
+			// Собираем данные
+			const formData = {
+				name: name,
+				attendance: attendance.value,
+				food: Array.from(document.querySelectorAll('input[name="food"]:checked')).map(el => el.value),
+				drink: Array.from(document.querySelectorAll('input[name="drink"]:checked')).map(el => el.value),
+				allergies: document.getElementById('allergies').value.trim()
+			};
+			
+			console.log('Данные формы:', formData);
+			
+			alert('Спасибо за ваш ответ! Мы получили вашу анкету.');
+			this.reset();
+		});
+    </script>
+
+</body>
+</html>
