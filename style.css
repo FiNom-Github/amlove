@@ -456,6 +456,43 @@
 		    }
 		}
 
+		/* ========== ROUTE BUTTON ========== */
+		.route-btn {
+			display: inline-block;
+			margin-top: 30px;
+			padding: 15px 40px;
+			background: #d4af37;
+			color: white;
+			text-decoration: none;
+			border-radius: 50px;
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 1.2rem;
+			letter-spacing: 2px;
+			transition: all 0.3s ease;
+			box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+		}
+
+		.route-btn:hover {
+			background: #b8960c;
+			transform: translateY(-2px);
+			box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+		}
+
+		.location-hint {
+			margin-top: 15px;
+			font-size: 0.95rem;
+			color: #8b7355;
+			font-style: italic;
+		}
+
+		@media (max-width: 480px) {
+			.route-btn {
+				padding: 12px 30px;
+				font-size: 1rem;
+			}
+		}
+
+
         /* ========== TIMELINE SECTION ========== */
 		.timeline {
 			padding: 100px 20px;
