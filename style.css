@@ -169,7 +169,6 @@
 		}
 }
 
-
 	/* ========== POLAROID SECTION ========== */
 	.polaroid-section {
 		min-height: 100vh;
@@ -182,26 +181,6 @@
 		position: relative;
 	}
 
-	.heart-decoration {
-		position: absolute;
-		font-size: 2rem;
-		color: #d4af37;
-		opacity: 0.6;
-		animation: floatHeart 3s ease-in-out infinite;
-	}
-
-	.heart-1 {
-		top: 15%;
-		left: 10%;
-		animation-delay: 0s;
-	}
-
-	.heart-2 {
-		top: 20%;
-		right: 10%;
-		animation-delay: 1.5s;
-	}
-
 	.polaroid-container {
 		display: flex;
 		flex-direction: row;
@@ -209,7 +188,7 @@
 		justify-content: center;
 		gap: 20px;
 		z-index: 1;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 	}
 
 	.polaroid {
@@ -297,6 +276,101 @@
 		margin-bottom: 10px;
 		text-transform: uppercase;
 		line-height: 1.6;
+	}
+
+	.heart-decoration {
+		position: absolute;
+		font-size: 2rem;
+		color: #d4af37;
+		opacity: 0.6;
+		animation: floatHeart 3s ease-in-out infinite;
+	}
+
+	.heart-1 {
+		top: 15%;
+		left: 10%;
+		animation-delay: 0s;
+	}
+
+	.heart-2 {
+		top: 20%;
+		right: 10%;
+		animation-delay: 1.5s;
+	}
+
+	/* ========== АДАПТИВ ДЛЯ POLAROID ========== */
+	@media (max-width: 768px) {
+		.polaroid-container {
+			gap: 15px;
+		}
+
+		.polaroid {
+			max-width: 180px;
+			padding: 10px 10px 18px 10px;
+		}
+
+		.polaroid-name {
+			font-size: 1.5rem;
+		}
+
+		.plus-sign {
+			font-size: 2rem;
+			margin: 0 8px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.polaroid-section {
+			padding: 40px 15px;
+		}
+
+		.polaroid-container {
+			gap: 10px;
+		}
+
+		.polaroid {
+			max-width: 140px;
+			padding: 8px 8px 15px 8px;
+		}
+
+		.polaroid-name {
+			font-size: 1.3rem;
+		}
+
+		.plus-sign {
+			font-size: 1.8rem;
+			margin: 0 5px;
+		}
+
+		.couple-initials {
+			font-size: 2rem;
+			margin: 20px 0;
+		}
+
+		.polaroid-main-text {
+			font-size: 1rem;
+			letter-spacing: 2px;
+		}
+	}
+
+	@media (max-width: 360px) {
+		.polaroid-container {
+			gap: 8px;
+		}
+
+		.polaroid {
+			max-width: 120px;
+			padding: 6px 6px 12px 6px;
+		}
+
+		.polaroid-name {
+			font-size: 1.1rem;
+		}
+
+		.plus-sign {
+			font-size: 1.5rem;
+			margin: 0 4px;
+		}
 	}
 
 	/* ========== WELCOME SECTION ========== */
@@ -844,12 +918,6 @@
 		transform: scale(1.1);
 	}
 
-	.color-name {
-		font-size: 1rem;
-		color: #4a4a4a;
-		letter-spacing: 1px;
-	}
-
 	/* Мужская секция */
 	.men-colors {
 		margin-top: 60px;
@@ -877,10 +945,6 @@
 			height: 65px;
 		}
 
-		.color-name {
-			font-size: 0.9rem;
-		}
-
 		.men-colors {
 			margin-top: 40px;
 			padding-top: 30px;
@@ -888,23 +952,19 @@
 	}
 
 	@media (max-width: 480px) {
-.color-palette {
-	gap: 15px;
-}
+	.color-palette {
+		gap: 15px;
+	}
 
-.color-circle {
-	width: 55px;
-	height: 55px;
-}
+	.color-circle {
+		width: 55px;
+		height: 55px;
+	}
 
-.color-name {
-	font-size: 0.8rem;
-}
-
-.men-title {
-	font-size: 1.3rem;
-}
-}
+	.men-title {
+		font-size: 1.3rem;
+	}
+	}
 	
 	/* ========== GIFTS SECTION ========== */
 	.gifts {
