@@ -924,7 +924,8 @@ body {
 
 .rsvp-form {
 	flex: 1;
-	min-width: 280px;
+	width: 100%;
+	max-width: 500px;
 	background: white;
 	padding: 50px;
 	border-radius: 20px;
