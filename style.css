@@ -297,14 +297,14 @@ body {
 }
 
 .plus-sign {
-	font-family: 'Great Vibes', cursive;
+	font-family: 'Bad Script', cursive;
 	font-size: 2.5rem;
 	color: #8b7355;
 	margin: 0 10px;
 }
 
 .couple-initials {
-	font-family: 'Great Vibes', cursive;
+	font-family: 'Bad Script', cursive;
 	font-size: 2.5rem;
 	color: #4a4a4a;
 	margin: 30px 0;
@@ -914,7 +914,7 @@ body {
 }
 
 .rsvp-container {
-	max-width: 1000px;
+	max-width: 100%;
 	margin: 0 auto;
 	display: flex;
 	gap: 40px;
@@ -1494,10 +1494,18 @@ body {
 	.rsvp {
 		padding: 50px 10px;
 	}
+	
+	.rsvp-container {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
 
 	.rsvp-form {
-		padding: 20px 15px;
-		min-width: 100%;
+		padding: 20px 12px;
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
 	}
 
 	.form-group label {
@@ -1511,12 +1519,16 @@ body {
 	.form-group textarea {
 		padding: 9px 11px;
 		font-size: 0.95rem;
+		max-width: 100%;
+		box-sizing: border-box;
 	}
 
 	.submit-btn {
 		padding: 12px;
 		font-size: 1rem;
 		letter-spacing: 1px;
+		max-width: 100%;
+		box-sizing: border-box;
 	}
 
 	.countdown-number {
