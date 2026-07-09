@@ -484,6 +484,56 @@
 		</div>
 	</section>
 
+	<!-- ========== CHAT QR CODE SECTION ========== -->
+	<section class="chat-section">
+		<div class="chat-decoration">
+			<div class="chat-line"></div>
+			<svg class="chat-hearts-svg" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<!-- Правое сердце (нижнее, рисуется первым) -->
+			<path d="M75 65 C60 55, 55 45, 55 38 C55 30, 62 25, 70 25 C75 25, 79 28, 82 32 C85 28, 89 25, 94 25 C102 25, 109 30, 109 38 C109 45, 104 55, 89 65 L82 70 L75 65Z" 
+				  stroke="#b89a8a" 
+				  stroke-width="2.5" 
+				  stroke-linecap="round"
+				  stroke-linejoin="round"
+				  fill="none"/>
+			
+			<!-- Левое сердце (верхнее, с белой подложкой для эффекта переплетения) -->
+			<!-- Сначала белая подложка, чтобы "прервать" линию нижнего сердца -->
+			<path d="M35 55 C20 45, 15 35, 15 28 C15 20, 22 15, 30 15 C35 15, 39 18, 42 22 C45 18, 49 15, 54 15 C62 15, 69 20, 69 28 C69 35, 64 45, 49 55 L42 60 L35 55Z" 
+				  stroke="white" 
+				  stroke-width="6" 
+				  stroke-linecap="round"
+				  stroke-linejoin="round"
+				  fill="none"
+				  opacity="0.9"/>
+			
+			<!-- Затем само левое сердце поверх -->
+			<path d="M35 55 C20 45, 15 35, 15 28 C15 20, 22 15, 30 15 C35 15, 39 18, 42 22 C45 18, 49 15, 54 15 C62 15, 69 20, 69 28 C69 35, 64 45, 49 55 L42 60 L35 55Z" 
+				  stroke="#b89a8a" 
+				  stroke-width="2.5" 
+				  stroke-linecap="round"
+				  stroke-linejoin="round"
+				  fill="none"/>
+			</svg>
+			<div class="chat-line"></div>
+		</div>
+		
+		<h2 class="chat-title">Присоединяйтесь к нашему свадебному чату</h2>
+		
+		<div class="chat-content">
+			<div class="qr-code-wrapper">
+				<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://max.ru/join/BDiez4IplpkJpXZQXaxu4-ITNcS7CFUzKf0I1COuQv4" 
+					 alt="QR-код для чата" 
+					 class="qr-code">
+			</div>
+		</div>
+		<!-- Кнопка с прямой ссылкой -->
+		<a href="https://max.ru/join/BDiez4IplpkJpXZQXaxu4-ITNcS7CFUzKf0I1COuQv4" target="_blank" class="chat-btn">
+			Присоединиться к чату
+		</a>
+		<p class="chat-subtitle">Давайте делиться эмоциями и моментами этого дня!</p>
+	</section>
+
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <p>Алексей и Мария | 29 августа 2026</p>
