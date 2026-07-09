@@ -1,5 +1,5 @@
 // ========== НАСТРОЙКИ ==========
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyRhdv6ec8PdL5UynK3S4dsoOUGeY2_rRnu8Uzg1dBhO5TdbUXNbi4AFyRdxyHbEK8x0w/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzdbPhsUykkdj1ODKdQFPJ7g-zm0M6U0GPzraNBurihRqGRA6VRRBCQgSlHLOFg62yDqA/exec';
 
 // ========== COUNTDOWN TIMER ==========
 function updateCountdown() {
