@@ -638,6 +638,7 @@ body {
 	flex-wrap: wrap;
 	gap: 12px 20px;
 	margin-top: 5px;
+	flex-direction: column;
 }
 
 /* 🔹 Чекбоксы алкоголя — СТРОГО В ОДИН СТОЛБИК */
@@ -1308,6 +1309,9 @@ body {
 		min-width: 55px;
 	}
 
+	.radio-group {
+		gap: 12px;
+	}
 }
 
 @media (max-width: 480px){
@@ -1427,7 +1431,7 @@ body {
 
 	/* Radio & Check*/
 	.radio-group {
-		gap: 12px;
+		gap: 10px;
 	}
 
 	.checkbox-group {
