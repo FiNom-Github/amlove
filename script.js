@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Собираем данные
             const name = form.querySelector('#name').value.trim();
             const attendance = form.querySelector('input[name="attendance"]:checked')?.value || '';
+			const transfer = form.querySelector('input[name="transfer"]:checked')?.value || '';
             
             // Собираем все выбранные напитки
             const drinkCheckboxes = form.querySelectorAll('input[name="drink"]:checked');
@@ -50,15 +51,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 const label = cb.closest('.checkbox-label');
                 return label ? label.textContent.trim() : cb.value;
             }).join(', ');
-            
-            const allergies = form.querySelector('#allergies')?.value.trim() || '';
-            
+                        
             // Формируем объект для отправки
             const formData = {
                 name: name,
                 attendance: attendance,
+				transfer: transfer,
                 drinks: drinks,
-                allergies: allergies
             };
             
             // Отправляем в Google Apps Script
