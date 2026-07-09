@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = {
                 name: name,
                 attendance: attendance,
-                drinks: drinks,
-				transfer: transfer
+				transfer: transfer,
+                drinks: drinks
             };
             
             // Отправляем в Google Apps Script
