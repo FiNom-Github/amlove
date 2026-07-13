@@ -847,12 +847,6 @@ body {
 	width: 100%;
 }
 
-.calendar-rings {
-	width: 80px;
-	margin: 0 auto 20px;
-	opacity: 0.8;
-}
-
 .calendar-subtitle {
 	font-family: 'Montserrat', serif;
 	font-size: 1rem;
@@ -1330,11 +1324,6 @@ body {
 		width: 100%;
 		padding: 25px 20px;
 		border-radius: 15px;
-	}
-
-	.calendar-rings {
-		width: 60px;
-		margin-bottom: 15px;
 	}
 
 	.calendar-subtitle {
