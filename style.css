@@ -819,6 +819,22 @@ body {
 	margin-top: 30px;
 }
 
+/* ========== КАЛЕНДАРЬ (отдельная секция) ========== */
+.calendar-section {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #f5efe6 0%, #faf6f1 100%);
+    text-align: center;
+}
+
+.calendar-section .calendar-block {
+    max-width: 450px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
 /* ========== КАЛЕНДАРЬ ========== */
 .calendar-block {
 	flex: 0 0 auto;
@@ -907,30 +923,20 @@ body {
 	color: #c9a961;
 }
 
-/* ========== RSVP SECTION ========== */
+/* ========== RSVP SECTION (только форма) ========== */
 .rsvp {
-	padding: 100px 20px;
-	background: linear-gradient(135deg, #f5efe6 0%, #faf6f1 100%);
-}
-
-.rsvp-container {
-	max-width: 900px;
-	margin: 0 auto;
-	display: flex;
-	gap: 40px;
-	align-items: flex-start;
-	flex-wrap: wrap;
+    padding: 100px 20px;
+    background: fff;
 }
 
 .rsvp-form {
-	flex: 1;
-	width: 100%;
-	max-width: 500px;
-	background: white;
-	padding: 50px;
-	border-radius: 20px;
-	box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-	box-sizing: border-box;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
 
 .form-group {
@@ -1311,6 +1317,14 @@ body {
     }
 	
 	/* ---- Calendar ---- */
+	.calendar-section {
+        padding: 60px 15px;
+    }
+
+    .calendar-section .calendar-block {
+        padding: 30px 20px;
+    }
+	
 	.calendar-block {
 		max-width: 100%;
 		width: 100%;
@@ -1598,7 +1612,15 @@ body {
 		font-size: 1.3rem;
 	}
 
-	/* ---- Calendar ---- */
+	/* ---- Calendar ---- */	
+	.calendar-section .calendar-block {
+        padding: 25px 15px;
+    }
+
+    .rsvp-form {
+        padding: 25px 15px;
+    }
+	
 	.calendar-block {
 		padding: 20px 15px;
 	}
