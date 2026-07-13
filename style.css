@@ -820,6 +820,40 @@ body {
 }
 
 /* ========== КАЛЕНДАРЬ (отдельная секция) ========== */
+.rings-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 140px; /* Подстройте под размер вашей картинки */
+}
+
+.calendar-rings-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Верхнее сердечко */
+.heart-top {
+    position: absolute;
+    top: -10px;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+}
+
+/* Нижнее сердечко */
+.heart-bottom {
+    position: absolute;
+    bottom: -5px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.7;
+}
+
 .calendar-section {
     padding: 100px 20px;
     background: linear-gradient(135deg, #f5efe6 0%, #faf6f1 100%);
@@ -1311,6 +1345,20 @@ body {
     }
 	
 	/* ---- Calendar ---- */
+	.rings-wrapper {
+        width: 130px;
+    }
+    
+    .heart-top {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .heart-bottom {
+        width: 25px;
+        height: 25px;
+    }
+	
 	.calendar-section {
         padding: 60px 15px;
     }
@@ -1601,7 +1649,21 @@ body {
 		font-size: 1.3rem;
 	}
 
-	/* ---- Calendar ---- */	
+	/* ---- Calendar ---- */
+	.rings-wrapper {
+        width: 120px;
+    }
+    
+    .heart-top {
+        width: 23px;
+        height: 23px;
+    }
+    
+    .heart-bottom {
+        width: 20px;
+        height: 20px;
+    }
+	
 	.calendar-section .calendar-block {
         padding: 25px 15px;
     }
