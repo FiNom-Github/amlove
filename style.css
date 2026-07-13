@@ -879,25 +879,24 @@ body {
 	min-width: 0;
 }
 
-.calendar-day:hover {
-	background: #f0e6d2;
-	transform: scale(1.1);
-}
-
 .calendar-day.highlighted {
-	background: #d4af37;
-	color: white;
+	color: #d4af37;
 	font-weight: 600;
 	position: relative;
 	animation: pulse 2s infinite;
+	z-index: 1; /* Число поверх сердечка */
 }
 
 .calendar-day.highlighted::after {
 	content: '♥';
 	position: absolute;
-	bottom: -8px;
-	font-size: 0.7rem;
-	color: #d4af37;
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: #d4af37;
+    opacity: 0.4; /* Полупрозрачное сердечко */
+    z-index: 0;
 }
 
 .calendar-day.empty {
@@ -1348,8 +1347,7 @@ body {
 	}
 
 	.calendar-day.highlighted::after {
-		font-size: 0.6rem;
-		bottom: -6px;
+		font-size: 4.2rem;
 	}
 
 	/* ---- RSPV ----*/
@@ -1623,8 +1621,7 @@ body {
 	}
 
 	.calendar-day.highlighted::after {
-		font-size: 0.5rem;
-		bottom: -5px;
+		font-size: 3.5rem;
 	}
 
 	/* ---- RSPV ----*/
