@@ -761,12 +761,9 @@ body {
 .color-palette {
 	display: flex;
 	justify-content: center;
-	gap: 30px;
+	gap: 15px;
 	margin-top: 40px;
 	flex-wrap: wrap;
-	max-width: 900px;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .color-item {
@@ -774,13 +771,14 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 0;
 }
 
 .color-circle {
 	width: 80px;
 	height: 80px;
 	border-radius: 50%;
-	margin-bottom: 12px;
+	margin-bottom: 8px;
 	box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 	transition: transform 0.3s ease;
 }
@@ -1290,18 +1288,23 @@ body {
 
 	/* ---- Dress ---- */
 	.color-palette {
-		gap: 20px;
+		gap: 12px;
 	}
 
 	.color-circle {
 		width: 65px;
 		height: 65px;
+		margin-bottom: 6px;
 	}
 
 	.men-colors {
 		margin-top: 40px;
 		padding-top: 30px;
 	}
+	
+	.color-item {
+        flex: 0 0 calc(33.333% - 20px); /* 3 элемента в ряд с учётом gap */
+    }
 	
 	/* ---- Calendar ---- */
 	.calendar-block {
@@ -1577,17 +1580,22 @@ body {
 
 	/* ---- Dress ---- */
 	.color-palette {
-		gap: 15px;
+		gap: 10px;
 	}
 
 	.color-circle {
 		width: 55px;
 		height: 55px;
+		margin-bottom: 5px;
 	}
 
 	.men-title {
 		font-size: 1.3rem;
 	}
+
+	.color-item {
+        flex: 0 0 calc(33.333% - 10px); /* 3 элемента в ряд с меньшими отступами */
+    }
 
 	/* ---- Calendar ---- */
 	.calendar-block {
