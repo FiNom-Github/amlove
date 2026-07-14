@@ -15,7 +15,7 @@
 	<section class="hero">
 		<!-- Левая часть: фото с эффектом затухания -->
 		<div class="hero-photo">
-			<img src="images\1_1.jpg" alt="Алексей и Мария">
+			<img src="images\1.jpg" alt="Алексей и Мария">
 			<div class="photo-fade"></div>
 		</div>
 		
@@ -78,38 +78,44 @@
     <!-- ========== WELCOME SECTION ========== -->
     <section class="welcome">
         <div class="welcome-container">
-            <h2 class="welcome-title">Дорогие гости!</h2>
-            
-            <div class="welcome-content">
-                <p>
-                    Мы очень хотим разделить с вами один из самых важных дней в нашей жизни.<br>
-					Будем счастливы видеть вас на нашей свадьбе!
-                </p>
-            </div>
-
-            <!-- COUNTDOWN TIMER -->
-            <div class="countdown-container">
-				<div class="countdown-item">
-					<div class="countdown-number" id="days">00</div>
-					<div class="countdown-label">дней</div>
-				</div>
-				<div class="countdown-divider">:</div>
-				<div class="countdown-item">
-					<div class="countdown-number" id="hours">00</div>
-					<div class="countdown-label">часов</div>
-				</div>
-				<div class="countdown-divider">:</div>
-				<div class="countdown-item">
-					<div class="countdown-number" id="minutes">00</div>
-					<div class="countdown-label">минут</div>
-				</div>
-				<div class="countdown-divider">:</div>
-				<div class="countdown-item">
-					<div class="countdown-number" id="seconds">00</div>
-					<div class="countdown-label">секунд</div>
-				</div>
+			<!-- Фото -->
+			<div class="welcome-photo">
+				<img src="images/3.jpg" alt="Алексей и Мария">
+				<div class="photo-fade"></div>
 			</div>
-			<div class="countdown-text">До нашей свадьбы</div>
+            
+			<!-- Контент -->
+			<div class="welcome-content-wrapper">
+				<h2 class="welcome-title">Дорогие гости!</h2>
+				<div class="welcome-content">
+					<p>Мы очень хотим разделить с вами один из самых важных дней в нашей жизни.</p>
+					<p>Будем счастливы видеть вас на нашей свадьбе!</p>
+				</div>
+				
+				<!-- Таймер остаётся здесь -->
+				<div class="countdown-container">
+					<div class="countdown-item">
+						<div class="countdown-number" id="days">00</div>
+						<div class="countdown-label">дней</div>
+					</div>
+					<div class="countdown-divider">:</div>
+					<div class="countdown-item">
+						<div class="countdown-number" id="hours">00</div>
+						<div class="countdown-label">часов</div>
+					</div>
+					<div class="countdown-divider">:</div>
+					<div class="countdown-item">
+						<div class="countdown-number" id="minutes">00</div>
+						<div class="countdown-label">минут</div>
+					</div>
+					<div class="countdown-divider">:</div>
+					<div class="countdown-item">
+						<div class="countdown-number" id="seconds">00</div>
+						<div class="countdown-label">секунд</div>
+					</div>
+				</div>
+				<div class="countdown-text">До нашей свадьбы</div>
+			</div>
         </div>
     </section>
 
@@ -311,17 +317,23 @@
 
     <!-- ========== GIFTS SECTION ========== -->
     <section class="gifts">
-        <h2 class="section-title">О подарках</h2>
-        <div class="gifts-text">
-            <p>
-                Ваше присутствие в день нашей свадьбы - самый дорогой подарок!
-            </p>
-            <p>
-                Мы с теплом относимся к традиции дарить цветы, но сами их не очень любим, поэтому будем благодарны,
-				если вы не будете их приносить — для нас важнее ваше внимание и тёплые эмоции этого дня.
-            </p>
-        </div>
-    </section>
+		<div class="gifts-container">
+			<!-- Фото слева -->
+			<div class="gifts-photo">
+				<img src="images/4.jpg" alt="Алексей и Мария">
+				<div class="photo-fade"></div>
+			</div>
+			
+			<!-- Контент справа -->
+			<div class="gifts-content-wrapper">
+				<h2 class="gifts-title">О подарках</h2>
+				<div class="gifts-text">
+					<p>Ваше присутствие в день нашей свадьбы — самый дорогой подарок!</p>
+					<p>Мы с теплом относимся к традиции дарить цветы, но сами их не очень любим, поэтому будем благодарны, если вы не будете их приносить — для нас важнее ваше внимание и тёплые эмоции этого дня.</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
     <!-- ========== КАЛЕНДАРЬ ========== -->
 	<section class="calendar-section">
@@ -481,11 +493,6 @@
 						<input type="checkbox" name="drink" value="champagne">
 						<span class="checkbox-custom"></span>
 						Шампанское
-					</label>
-					<label class="checkbox-label">
-						<input type="checkbox" name="drink" value="whiskey">
-						<span class="checkbox-custom"></span>
-						Виски/коньяк
 					</label>
 					<label class="checkbox-label">
 						<input type="checkbox" name="drink" value="vodka">
